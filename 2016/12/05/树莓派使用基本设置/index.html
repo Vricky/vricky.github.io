@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>树莓派使用基本设置 | Blog·Vricky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先，树莓派正常使用必须品：树莓派板子，通电电源、线，内存卡（卡内须有系统）。这几项足够让你的树莓派开启。关于鼠标，键盘，显示器之类的都是辅助用品。卡内系统的安装问题，等待自己研究一下后再进行总结。可先用自带系统烤入内存卡进行使用。">
+<meta name="keywords" content="配置,树莓派">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派使用基本设置">
+<meta property="og:url" content="http://yoursite.com/2016/12/05/树莓派使用基本设置/index.html">
+<meta property="og:site_name" content="Blog·Vricky">
+<meta property="og:description" content="首先，树莓派正常使用必须品：树莓派板子，通电电源、线，内存卡（卡内须有系统）。这几项足够让你的树莓派开启。关于鼠标，键盘，显示器之类的都是辅助用品。卡内系统的安装问题，等待自己研究一下后再进行总结。可先用自带系统烤入内存卡进行使用。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2016-12-05T02:27:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派使用基本设置">
+<meta name="twitter:description" content="首先，树莓派正常使用必须品：树莓派板子，通电电源、线，内存卡（卡内须有系统）。这几项足够让你的树莓派开启。关于鼠标，键盘，显示器之类的都是辅助用品。卡内系统的安装问题，等待自己研究一下后再进行总结。可先用自带系统烤入内存卡进行使用。">
+  
+    <link rel="alternative" href="/atom.xml" title="Blog·Vricky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/uploads/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/uploads/suzy2.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Vricky</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">多想过去的时间就是一场梦~</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">Home</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/Vricky" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lvxinVricky" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="/949927007@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+					<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Vricky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/uploads/suzy2.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Vricky</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">多想过去的时间就是一场梦~</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Vricky" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lvxinVricky" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/949927007@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+						<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-树莓派使用基本设置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      树莓派使用基本设置
+    </h1>
+  
+
+        <a href="/2016/12/05/树莓派使用基本设置/" class="archive-article-date">
+  	<time datetime="2016-12-05T02:27:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-05</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="首先，树莓派正常使用必须品："><a href="#首先，树莓派正常使用必须品：" class="headerlink" title="首先，树莓派正常使用必须品："></a><strong>首先，树莓派正常使用必须品：</strong></h2><p>树莓派板子，通电电源、线，内存卡（卡内须有系统）。这几项足够让你的树莓派开启。关于鼠标，键盘，显示器之类的都是辅助用品。卡内系统的安装问题，等待自己研究一下后再进行总结。可先用自带系统烤入内存卡进行使用。<br><a id="more"></a></p>
+<h2 id="树莓派默认系统文字为英文，且中文显示为乱码，所以开启后还需配置中文字库，方法如下："><a href="#树莓派默认系统文字为英文，且中文显示为乱码，所以开启后还需配置中文字库，方法如下：" class="headerlink" title="树莓派默认系统文字为英文，且中文显示为乱码，所以开启后还需配置中文字库，方法如下："></a><strong>树莓派默认系统文字为英文，且中文显示为乱码，所以开启后还需配置中文字库，方法如下：</strong></h2><p>1.安装中文字体。<br>终端下执行命令：<code>sudo apt-get -y install ttf-wqy-zenhei</code> </p>
+<p>2.安装中文输入法<br>终端下执行命令：<code>sudo apt-get -y install scim-pinyin</code> </p>
+<p>3.设置显示中文。<br>安装完成后，终端下执行命令：<code>sudo raspi-config</code> 调出系统配置界面<br>接着操作提示：<br>选择  <code>5  Internationalisation Options</code><br>选择I  <code>1 Change Locale</code><br>选择   <code>zh-CN，UTF8</code></p>
+<p>4.重启生效。终端下执行命令：sudo reboot 重启。 </p>
+<h2 id="可以给树莓派设置远程连接和远程桌面设置："><a href="#可以给树莓派设置远程连接和远程桌面设置：" class="headerlink" title="可以给树莓派设置远程连接和远程桌面设置："></a><strong>可以给树莓派设置远程连接和远程桌面设置：</strong></h2><p>终端下执行命令： ifconfig-a，查看树莓派的IP。 </p>
+<p>两种远程连接方式：<br><em>A：SSH远程连接</em>，建议使用putty连接链接输入树莓派IP，用户名：pi 密码raspberry，就出现终端界面了。<br><em>B：远程桌面连接</em><br>终端下执行命令：<code>sudo apt-get install xrdp</code> ，安装远程桌面支持。<br>在windows电脑上点开始，输入mstsc，出来远程桌面界面，输入树莓派IP，用户名：pi 密码raspberry，就可以连上了。<br>终端下执行命令：<code>sudo poweroff</code> 关机。然后断开电源。</p>
+<p>这样树莓派对你来说就只需要上述必需品即可在自己的个人电脑上利用远程连接来进行图形化操作。</p>
+<h2 id="关于树莓派音频输出问题："><a href="#关于树莓派音频输出问题：" class="headerlink" title="关于树莓派音频输出问题："></a><strong>关于树莓派音频输出问题：</strong></h2><p>树莓派其默认音频输出为自动。树莓派有两种品拼输出模式：HDMI（2）和3.5耳机接口（1）输出。可以根据需要进行间切换。</p>
+<p><em>以下为三种切换方式：</em></p>
+<p><em>1.在命令行终端上输入下面命令将会切换到HDMI输出模式：</em></p>
+<pre><code>amixer cset numid=3 2 
+</code></pre><p>这里将输出设置为2，也就是HDMI。</p>
+<p>将输出设置为1将切换到模拟信号（也就是耳机接口）。<br>默认的设置为0，代表自动选择。</p>
+<p><em>2.在raspi-config设置工具下</em></p>
+<p>2.1命令行打开raspi-config工具<br>2.2选择advanced Options进入，并选音频audio选项</p>
+<p>2.3现在你可以看到默认选择Auto选项以及另外两种模式的列表。选择其中一种模式然后回车，再按向右光标控制键跳出选项菜单，选择Finish退出配置工具，完成配置。</p>
+<p><em>3.在一些少见的情况下，你需要编辑config.txt文件来强制进入HDMI模式（为了排除没有附带声音的DVI模式）。实现这个目的，你可以编辑/boot/config.txt文件设置hdmi_drive=2，然后重启系统让修改生效。</em></p>
+<p>重点提醒：如果你浏览器下尝试进行音频输出（就是传说中的听歌啦），可能会有很多杂音，这个要淡定，楼主也因为这件事搞了一上午才搞清楚，你使用的浏览器一定是firefox或者是年轻的使用了自带的浏览器，可能是因为这两个浏览器的音频解码问题，对mp3格式的解码貌似有点问题，这个时候强烈建议使用chromium浏览器，就是你windows下常用的chrome。树莓派已经支持HTML5音视频的Chromium浏览器安装。chromium浏览器和谷歌浏览器使用一样的webkit核心，速度简直跟firefox不是一个等级，渲染效果也是挺好的。安装方法如下：</p>
+<pre><code>cd ~
+wget https://launchpadlibrarian.net/2 ... 04.1.1183_armhf.deb
+wget https://launchpadlibrarian.net/2 ... 04.1.1183_armhf.deb
+wget https://launchpadlibrarian.net/2 ... 04.1.1183_armhf.deb
+sudo apt-get insall libgnome-keyring0 xdg-utils libss3
+sudo dpkg -i *.deb
+</code></pre><p>注：第五步可能存在libss3的安装有点问题，可以忽略继续进行下一步。安装完成后就可以在Internet下找到chromium进行使用，在线听歌啥的都是洒洒水。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>thanks for your support<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/suzy.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/kobe.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/树莓派/">树莓派</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置/">配置</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/06/- 博客/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo + github快速构建个人博客
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/05/linux下安装LAMP环境部署与lamp下mysql的远程连接/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux下安装LAMP环境部署与lamp下mysql的远程连接</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/12/05/树莓派使用基本设置/" data-title="树莓派使用基本设置" data-url="http://yoursite.com/2016/12/05/树莓派使用基本设置/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vricky"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017-10-18 Vricky
+    	</div>
+      	<div class="footer-right">
+      		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
+          This is used by LvXin
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/配置/" style="font-size: 20px;">配置</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">就是一个很迷惘的研究僧，IT男O(∩_∩)O</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

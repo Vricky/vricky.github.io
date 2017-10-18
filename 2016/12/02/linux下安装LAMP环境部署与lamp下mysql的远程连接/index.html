@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>linux下安装LAMP环境部署与lamp下mysql的远程连接 | Blog·Vricky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.linux下LAMP（linux+apache+mysql+php）环境安装
+  这个网上有挺多教程，我用的是一键安装LAMP(oneinstack软件)，教程链接如下：http://bbs.qcloud.com/thread-8480-1-1.html 按照这个教程基本上就是等时间的问题，就不说了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下安装LAMP环境部署与lamp下mysql的远程连接">
+<meta property="og:url" content="http://yoursite.com/2016/12/02/linux下安装LAMP环境部署与lamp下mysql的远程连接/index.html">
+<meta property="og:site_name" content="Blog·Vricky">
+<meta property="og:description" content="一.linux下LAMP（linux+apache+mysql+php）环境安装
+  这个网上有挺多教程，我用的是一键安装LAMP(oneinstack软件)，教程链接如下：http://bbs.qcloud.com/thread-8480-1-1.html 按照这个教程基本上就是等时间的问题，就不说了">
+<meta property="og:updated_time" content="2016-12-05T02:27:05.623Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux下安装LAMP环境部署与lamp下mysql的远程连接">
+<meta name="twitter:description" content="一.linux下LAMP（linux+apache+mysql+php）环境安装
+  这个网上有挺多教程，我用的是一键安装LAMP(oneinstack软件)，教程链接如下：http://bbs.qcloud.com/thread-8480-1-1.html 按照这个教程基本上就是等时间的问题，就不说了">
+  
+    <link rel="alternative" href="/atom.xml" title="Blog·Vricky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/uploads/favicon.ico">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/uploads/suzy2.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Vricky</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">多想过去的时间就是一场梦~</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">Home</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/Vricky" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lvxinVricky" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="/949927007@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
+					<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Vricky</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/uploads/suzy2.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Vricky</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">多想过去的时间就是一场梦~</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Vricky" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lvxinVricky" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="/949927007@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
+						<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-linux下安装LAMP环境部署与lamp下mysql的远程连接" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux下安装LAMP环境部署与lamp下mysql的远程连接
+    </h1>
+  
+
+        <a href="/2016/12/02/linux下安装LAMP环境部署与lamp下mysql的远程连接/" class="archive-article-date">
+  	<time datetime="2016-12-02T09:34:46.868Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-02</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>一.linux下LAMP（linux+apache+mysql+php）环境安装</strong></p>
+<p>  这个网上有挺多教程，我用的是一键安装LAMP(oneinstack软件)，教程链接如下：<a href="http://bbs.qcloud.com/thread-8480-1-1.html" target="_blank" rel="external">http://bbs.qcloud.com/thread-8480-1-1.html</a> 按照这个教程基本上就是等时间的问题，就不说了<br><a id="more"></a><br><strong>二.LAMP测试</strong></p>
+<p>apache的默认程序目录是：<strong>/var/www/html</strong>，网页文件放在这里就可以被访问到。需要保证这个目录是属于用户apache和用户组apache的。<br>在<strong>/var/www/html</strong>文件下放入主页index.php就可以显示，其他页面显示素材也可以放这里面（我暂时先这么放的）</p>
+<p>MySQL的数据库目录是：<strong>/var/lib/mysql</strong><br>写到这里，LAMP就安装配置完毕了，浏览器只要输入服务器的IP地址或者是域名的话，就能够访问到服务器上的网页文件了。</p>
+<p><strong>三.linux下mysql远程连接</strong></p>
+<p>一般安装完mysql后远程连接并不能连接到数据库需要进行一些修改。（因为mysql默认root用户只能本地访问）。以下步骤来开启mysql的远程连接：</p>
+<p>1.首先设置防火墙允许3306端口</p>
+<pre><code>vi /etc/sysconfig/IPtables
+</code></pre><p>  添加<code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT</code>（允许3306端口通过防火墙）<br>（注意添加在<code>-A RH-Firewall-1-INPUT -j REJECT –reject-with icmp-host-prohibited</code>之前，否则可能导致规则不生效）<br>重启防火墙</p>
+<pre><code>service iptables restart
+</code></pre><p>2.打开mysql，为mysql创建远程连接的授权用户</p>
+<pre><code>mysql -u root -p
+
+mysql&gt;GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY ‘root密码’ WITH GRANT OPTION;
+ //为root用户授权从任何其它主机发起的访问（通配符％），也可讲%换为特定的ip地址。
+mysql&gt;flush PRIVILEGES;    //使命令立即生效
+     //修改localhost
+     //更改 &quot;mysql&quot; 数据库里的 &quot;user&quot; 表里的 &quot;host&quot; 项，从&quot;localhost&quot;改成&quot;%&quot; 
+mysql&gt;use mysql; 
+mysql&gt;update user set host = &apos;%&apos; where user = &apos;root&apos;; 
+mysql&gt;select host, user from user; //查看是否已修改
+mysql&gt;FLUSH PRIVILEGES;
+用exit退出mysql
+</code></pre><p>3.<br>然后打开 </p>
+<pre><code>vi  /etc/mysql/my.cnf
+</code></pre><p>将bind-address    = 127.0.0.1<br> 设置成bind-address    = 0.0.0.0（设备地址）<br>重新启动（命令如下）：</p>
+<pre><code>/etc/init.d/mysql stop
+/etc/init.d/mysql start
+</code></pre><p>（chkconfig mysqld on命令可让mysql开机启动）<br>这样修改后mysql的远程连接就能连上了。。。</p>
+<p>附：<br>可通过<code>netstat -ntlp</code> 查看端口占用情况，一般mysql的占用端口是3306<br>单独查看3306，<code>netstat -ntlp | grep 3306</code></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>thanks for your support<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/suzy.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/uploads/kobe.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置/">配置</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/05/树莓派使用基本设置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          树莓派使用基本设置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/30/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">测试</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="2016/12/02/linux下安装LAMP环境部署与lamp下mysql的远程连接/" data-title="linux下安装LAMP环境部署与lamp下mysql的远程连接" data-url="http://yoursite.com/2016/12/02/linux下安装LAMP环境部署与lamp下mysql的远程连接/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vricky"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016-12-27 Vricky
+    	</div>
+      	<div class="footer-right">
+      		<!--<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten-->
+          This is used by LvXin
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/like/" style="font-size: 10px;">like</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/树莓派/" style="font-size: 10px;">树莓派</a> <a href="/tags/配置/" style="font-size: 20px;">配置</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">就是一个很迷惘的研究僧，IT男O(∩_∩)O</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
